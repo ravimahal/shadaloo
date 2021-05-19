@@ -27,31 +27,33 @@
                     </a>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 mb-4">
-                        <div class="card h-100">
-                            <a href="#!"><img class="card-img-top" src="{{ word_of_the_day.image.url }}" alt="..." /></a>
-                            <div class="card-body">
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="card h-100 text-center border-primary">
+                            <div class="card-header">
                                 <h4 class="card-title">Word of the day</h4>
+                            </div>
+                            <a href="#!"><img class="card-img-top img-thumbnail" src="{{ word_of_the_day.image.url }}" alt="..." /></a>
+                            <div class="card-body">
                                 <h5>{{ word_of_the_day.thai }}</h5>
                                 <h5>{{ word_of_the_day.english }}</h5>
                                 <h5>{{ word_of_the_day.transliteration }}</h5>
-                                <h5>
-                                    <!--<audio controls autoplay>-->
-                                        <audio controls>
-                                        <source src = "{{ word_of_the_day.audio.url }}" type = "audio/mp3" />
-                                        Your browser does not support the <audio> element.
-                                     </audio>
-                                </h5>
-
                             </div>
-                            <div class="card-footer"><small class="text-muted">★ ★ ★ ★ ☆</small></div>
+                            <div class="card-footer">
+                                <!--<audio controls autoplay>-->
+                                <audio controls style="width: 200px;">
+                                <source src = "{{ word_of_the_day.audio.url }}" type = "audio/mp3" />
+                                Your browser does not support the <audio> element.
+                                </audio>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <a href="units/"><img class="card-img-top" src="{% static 'units.jpg' %}" alt="..." /></a>
-                            <div class="card-body">
+                        <div class="card h-100 text-center border-success">
+                            <div class="card-header">
                                 <h4 class="card-title"><a href="units/">Units</a></h4>
+                            </div>
+                            <a href="units/"><img class="card-img-top img-thumbnail" src="{% static 'units.jpg' %}" alt="..." /></a>
+                            <div class="card-body">
                                 <h5>$24.99</h5>
                                 <p class="card-text"></p>
                             </div>
@@ -59,10 +61,25 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <a href="#!"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt="..." /></a>
+                        <div class="card h-100 text-center border-warning">
+                            <div class="card-header">
+                                <h4 class="card-title"><a href="#!">Overdue Words</a></h4>
+                            </div>
+                            <a href="#!"><img class="card-img-top img-thumbnail" src="https://via.placeholder.com/700x400" alt="..." /></a>
                             <div class="card-body">
-                                <h4 class="card-title"><a href="#!">Overdue words</a></h4>
+                                <h5>$24.99</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                            </div>
+                            <div class="card-footer"><small class="text-muted">★ ★ ★ ★ ☆</small></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="card h-100 text-center border-warning">
+                            <div class="card-header">
+                                <h4 class="card-title"><a href="#!">Settings</a></h4>
+                            </div>
+                            <a href="#!"><img class="card-img-top img-thumbnail" src="https://via.placeholder.com/700x400" alt="..." /></a>
+                            <div class="card-body">
                                 <h5>$24.99</h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                             </div>
