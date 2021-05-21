@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+<html>
+    <body>
+        {% block pagecontent %}
+        <!-- Page Content-->
+        <h1>Profile page</h1>
+        {{ status }}
+        <form class="profile_form" action = "{% url 'accounts:profile' %}" method="post">
+            {% csrf_token %}
+            {{ user_form }}
+            {{ extended_form }}
+            <input type="submit" value="Update">
+        </form>
+        {% endblock %}
+    </body>
+</html>
