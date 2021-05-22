@@ -8,6 +8,14 @@ def get_upload_path(instance, filename):
     # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
     return os.path.join("%s" % instance.unit_name, filename)
 
+def randomise_unit_content(unit):
+    content_length = 10
+
+    chosen_unit = Unit.objects.get(unit_name = unit)
+    rand_content = chosen_unit.word_set.all().order_by('?')[:content_length]
+
+    return rand_content
+
 # Create your models here.
 class Unit(models.Model):
     number = models.CharField(max_length = 250)
